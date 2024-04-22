@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <title>Produtos Disponíveis</title>
+</head>
+<body>
+    <header>
+        <h1>Produtos Disponíveis</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('adicionar_produto') }}">Cadastrar Novo Produto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <th class="id__tamanho">ID</th>
+                <th>Nome</th>
+                <th class="preco__tamanho">Preço (R$)</th>
+                <th class="estoque__tamanho">Estoque</th>
+                <th class="acoes__tamanho">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if not produtos: %}
+                <tr class="message__sem_registros">
+                    <td colspan="5">Não há produtos cadastrados</td>
+                </tr>
+            {% else %}
+                {% for produto in produtos %}
+                <tr>
+                    <td class="id__alinhamento">{{ produto.id }}</td>
+                    <td>{{ produto.nome }}</td>
+                    <td class="preco__alinhamento">{{ produto.preco }}</td>
+                    <td class="quantidade__alinhamento">{{ produto.quantidade_estoque }}</td>
+                    <td class="acoes__alinhamento"><a href="{{ url_for('editar_produto', id=produto.id) }}">Editar</a>
+                        <a href="{{ url_for('excluir_produto', id=produto.id) }}">Excluir</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+</body>
+</html>

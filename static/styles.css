@@ -1,0 +1,153 @@
+/* Estilos básicos para a página */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Estilos para cabeçalhos */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    width: 60%;
+}
+
+h1{
+    font-size: 1.5rem;
+    margin: 30px 0 10px 0;
+    text-align: center;
+}
+
+/* Estilos para navegação */
+nav {
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para tabelas */
+table {
+    width: 60%;    
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    width: auto;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Link para cancelar ação */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.id__tamanho{
+    width: 150px;
+}
+
+
+.preco__tamanho{
+    width: 150px;
+}
+
+.estoque__tamanho{
+    width: 150px;
+}
+
+.acoes__tamanho{
+    width: 100px;
+}
+
+.acoes__alinhamento{
+    text-align: center;
+}
+
+.id__alinhamento, .quantidade__alinhamento, .preco__alinhamento{
+    text-align: right;
+    padding-right: 10px;
+}
+
+.message__sem_registros{
+    text-align: center;
+}
