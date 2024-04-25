@@ -98,6 +98,7 @@ input {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 10px;
+    text-transform: capitalize;
 }
 
 button {
